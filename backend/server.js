@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 const corsOptions = {
-	origin: process.env.FRONTEND_URL,
+	origin: process.env.REACT_APP_FRONTEND_URL,
 	methods: ["GET", "POST", "DELETE"],
 	allowedHeaders: ["Content-Type", "Authorization"],
 	credentials: true,
@@ -30,14 +30,14 @@ main()
 	.catch((err) => console.log(err));
 
 async function main() {
-	await mongoose.connect(process.env.MONGODB_URI);
+	await mongoose.connect(process.env.REACT_APP_FRONTEND_URL);
 }
 
 // Root route
 app.get("/", (req, res) => {
 	res.json({
 		message: "Welcome to Chat Application!",
-		frontend_url: process.env.FRONTEND_URL,
+		frontend_url: process.env.REACT_APP_FRONTEND_URL,
 	});
 });
 
