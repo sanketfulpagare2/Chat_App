@@ -30,7 +30,7 @@ main()
 	.catch((err) => console.log(err));
 
 async function main() {
-	await mongoose.connect(process.env.REACT_APP_FRONTEND_URL);
+	await mongoose.connect(process.env.REACT_APP_MONGODB_URI);
 }
 
 // Root route
