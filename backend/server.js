@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 const corsOptions = {
-	origin: "https://chat-app-ten-zeta-97.vercel.app",
+	origin: process.env.REACT_APP_FRONTEND_URL,
 	methods: ["GET", "POST", "DELETE"],
 	allowedHeaders: ["Content-Type", "Authorization"],
 	credentials: true,
