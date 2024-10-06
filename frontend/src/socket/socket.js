@@ -1,5 +1,6 @@
 import { io } from "socket.io-client";
 const ENDPOINT = `${import.meta.env.VITE_BACKEND_URL}`;
+console.log("test:-"+ENDPOINT);
 const socket = io(ENDPOINT, {
 	reconnectionDelay: 1000,
 	reconnection: true,
